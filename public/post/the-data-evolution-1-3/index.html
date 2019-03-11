@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.42.1" />
+  <meta name="author" content="KHNajafi">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="Preface (of this series): It is well established today that data {Data is a general term I use for the spectrum of stats, data sci, ML and AI} is a function with an accelerating level of interest. For many there is difficulty in identifying what it means to them, and this is an important question to answer for anyone, whether you fall within this realm (data scientists, engineers, etc) or are outside of it (manager, marketer, etc).">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/the-data-evolution-1-3/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMerriweather%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Khalil H Najafi">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Khalil H Najafi">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/the-data-evolution-1-3/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Khalil H Najafi">
+  <meta property="og:url" content="/post/the-data-evolution-1-3/">
+  <meta property="og:title" content="The Data Evolution I — The Rise | Khalil H Najafi">
+  <meta property="og:description" content="Preface (of this series): It is well established today that data {Data is a general term I use for the spectrum of stats, data sci, ML and AI} is a function with an accelerating level of interest. For many there is difficulty in identifying what it means to them, and this is an important question to answer for anyone, whether you fall within this realm (data scientists, engineers, etc) or are outside of it (manager, marketer, etc)."><meta property="og:image" content="/img/headers/c&h-magicalworld.jpg">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-02-01T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-02-01T00:00:00&#43;00:00">
+  
+
+  
+
+  
+
+  <title>The Data Evolution I — The Rise | Khalil H Najafi</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Khalil H Najafi</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#feathers">
+            
+            <span>Feathers-in-my-Cap</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+<div class="article-header">
+  
+  
+    <img src="/img/headers/c&amp;h-magicalworld.jpg" class="article-banner" itemprop="image">
+  
+
+  <span class="article-header-caption">It feels like that first snow fall happens out of nowhere, but there are a number of changes leading up that usually occur unnoticed | <a href="https://www.gocomics.com/calvinandhobbes/2018/11/14" target="_blank">©1996</a> <em>Calvin &amp; Hobbes</em>; Bill Watterson</span>
+</div>
+
+
+
+  <div class="article-container">
+    <h1 itemprop="name">The Data Evolution I — The Rise</h1>
+
+    
+
+<div class="article-metadata">
+
+  
+
+  <span class="article-date">
+    
+    <meta content="2018-02-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2018-02-01 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      Feb 1, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="KHNajafi">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=The%20Data%20Evolution%20I%20%e2%80%94%20The%20Rise&amp;url=%2fpost%2fthe-data-evolution-1-3%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fthe-data-evolution-1-3%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fthe-data-evolution-1-3%2f&amp;title=The%20Data%20Evolution%20I%20%e2%80%94%20The%20Rise"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fthe-data-evolution-1-3%2f&amp;title=The%20Data%20Evolution%20I%20%e2%80%94%20The%20Rise"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=The%20Data%20Evolution%20I%20%e2%80%94%20The%20Rise&amp;body=%2fpost%2fthe-data-evolution-1-3%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      <blockquote>
+<p><em><strong>Preface (of this series)</strong>:</em> It is well established today that data <code>{Data is a general term I use for the spectrum of stats, data sci, ML and AI}</code> is a function with an accelerating level of interest. For many there is difficulty in identifying what it means <em>to them</em>, and this is an important question to answer for anyone, whether you fall within this realm (data scientists, engineers, etc) or are outside of it (manager, marketer, etc). And I think the source of this difficulty is directly caused by the lack of clarity around how this rise came to be. In these handful of posts I intend to describe the <del>r</del>evolution, and from that provide a premise of <strong>how to evolve your world view such that you can incorporate these new tools to enhance the functions and outputs you care about</strong>. You could say the first is the collection and tidying of the data, and the second is a set of inferences drawn from it.</p>
+</blockquote>
+<p>The realm of data – which is an umbrella term I use to include data science, statistics, and machine learning – has been in the spotlight for almost a decade. It has undoubtedly shown up in your life either through the lens of consumer products (think your fancy iPhone or smart wearable) or in your professional life, especially within industries like Business and Technology. Though I doubt anyone disagrees with this, strong evidence for this attention is seen in various career rankings where data roles have frequently represented a good portion of the top ten list: data roles were ranked first, second, and third in a <a href="https://www.wsj.com/articles/SB123119236117055127">WSJ study</a> almost a decade ago; recently sixth overall and first, second, third, sixth and tenth within the Business sector by <a href="https://money.usnews.com/careers/best-jobs/statistician">US News Best Jobs Rankings</a> for 2018. What has led to this increased infatuation? Knowing this will allow you to formulate your understanding of the domain, and how you can capture some of its goodness in service of your own endeavours, irrespective of the domain and function you operate in.</p>
+<p><strong>What will I get from reading this first article?</strong> By the end of this short post you will have a high-level review of the key elements behind it all, which is required to develop a framework to assess its role, value, and application to you. In the next I will offer my perspective of this framework to do exactly that.</p>
+<p>So let’s get right to it!</p>
+<p>The inputs to this rise can be reduced to the following two significant factors:</p>
+<ol style="list-style-type: decimal">
+<li>Manufacturing efficiencies of computer components (Economies of scale and scope)<br />
+</li>
+<li>The Internet</li>
+</ol>
+<p>The second is more readily understandable than the first, but let’s break each down with a bit more detail for clarity.</p>
+<p>“Manufacturing efficiencies” here is a general phrase referencing the remarkable gains in processing (including graphics processing) and in storage. Specifically, the increase in power and capacity coupled with a decrease in costs; a holy trinity of stronger, faster, cheaper. This is a well known fact of recent times and the natural question you may have is: how is this a significant factor? If you’ve ever taken a course in linear algebra for example, you may recall that computations such as inverting matrices were quite intensive to do manually (or maybe that was just for me). Faster and more powerful chips have enabled us to task computers with various calculations like these at scale. What about storage? With the favourable capacity and cost advancements, our “simple” desktop machines have enabled us to store large datasets in memory, to manipulate and transform them, and then to fit models to them. <code>{models are what enables us to make predictions, like 'will this customer churn? .. what's the fastest route? .. etc'}</code></p>
+<p>Storage also provides a natural segue to the second key factor of The Internet. With smaller, more powerful chips at cheaper prices, we’ve been able to outfit so many devices with them. Not only did computers become popular devices, but most devices became computers: phones, televisions, gaming systems, watches, etc. These subsequently generated lots of data which was also quite inexpensive to store. But there’s no real appeal in just outfitting things with more storage especially if they distract from the primary functions or physical features, so what if we can store it elsewhere and also access whenever necessary or sensible?</p>
+<p>As the digital infrastructure of wires, towers, and satellites provided a truly word wide web with sub-1s speeds, it was entirely reasonable to do just that: build large scale data storage facilities which enable data generation and collection, and then rely on the Internet to connect whatever (your computer, watch, car, thermostat, anything) in order to transfer whatever is required. This is essentially the birth of “big data” and of course the cloud.</p>
+<p>Now that’s mostly a summary of computers and technology with some intersection on data, but it may still be a bit unclear how all this connects causally to the data rise. <code>{Which is precisely the point I'm making, but more on that later}</code> For now I can still tie the above together a bit more explicitly.</p>
+<p>From these novel devices and the Internet itself (a world where everything can be a data point) data generation exploded. Also, with inexpensive storage and accessibility, we had a sharp and substantial increase in the <strong>supply of data</strong>. The next question became: what can we do with all this data? To which many thought: let’s bring in some domain experts to explore that. What these explorations yielded is demonstrated by thinking of some obvious examples; think of the Googles, Apples, or even Wal Marts, Amazons, and Netflixes, etc. Seeing the (incredibly powerful) outputs of these explorations, companies across industries increased their investments into data, giving you the increased <strong>demand in data</strong>; the efforts of attracting data people thereby leading to data roles landing in many of the top ten career rankings .. or in short, the rise.</p>
+<p>Remember <em>“Now that’s mostly a summary of computers and technology with some intersection on data”</em> ..?</p>
+<p>This here is the fundamental statement I’m making, which is what leads to the premise of <strong>evolution and not revolution</strong>: the rise of data is really a phenomenon that occurred as a byproduct of the advancement of technology, and not through some independent “oh stats is pretty cool” event. This distinction is what prevents us from grasping our heads around the buzz and most crucially, of determining how and why it matters to us. Whenever you consider data you should be thinking of technology and computers. Whenever you want to start to think of the purpose and value of data to you, think of the purpose and value of technology .. in a nutshell: <strong>thinking of data is like thinking of technology and computers, and therefore don’t think outputs, think inputs.</strong></p>
+<p>This might still be a bit fuzzy but we’ve accomplished the first necessary objective: an established basis of where and how data came about, and particularly that it is connected to a larger body, computers/technology. The second post will enable how to think about the usefulness of data to us individually, and should also make clear why not knowing this distinction prevented us in the first place. I will also share my own basis of the role and purpose of data that is largely universal to function and organization, so you can leverage it precisely to determine its usefulness. With those answers, your next steps become much more actionable as you’ll be able to say <em>‘Now I know what this means to me, how should I go about building/accomplishing this?’</em>.</p>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/data/">Data</a>
+  
+</div>
+
+
+
+
+    
+    
+
+    
+    <div class="article-widget">
+      <div class="post-nav">
+  
+  
+</div>
+
+    </div>
+    
+
+    
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+

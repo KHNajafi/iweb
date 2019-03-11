@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Khalil H Najafi on Khalil H Najafi</title>
+    <link>/</link>
+    <description>Recent content in Khalil H Najafi on Khalil H Najafi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0400</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Learning v. Knowing</title>
+      <link>/feathers/newvknown/</link>
+      <pubDate>Sat, 25 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/feathers/newvknown/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“The rate at which things change is greater than our rate to learn”&lt;/em&gt; — Anon&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This was a wonderful tidbit I heard while attending a recent conference, and it’s truly unfortunate that I cannot recall who said it! Nonetheless, on the quote itself:&lt;/p&gt;
+&lt;p&gt;Aside from the obvious, I find it tells us something a bit more implicit, and arguably more profound: Obtaining newly created knowledge is good and well, but &lt;em&gt;how well do you really understand something?&lt;/em&gt; Are there topics you have a mastery for? An awareness of new ideas, models, etc is most useful if it can further one’s understanding or capabilities &lt;em&gt;in their core domains&lt;/em&gt;. Jack-of-all-trades etc etc, as the other saying goes..&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 -0400</pubDate>
+      
+      <guid>/privacy/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Perimeter of Ignorance</title>
+      <link>/feathers/perimeter-of-ignorance/</link>
+      <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/feathers/perimeter-of-ignorance/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“As the area of our knowledge increases, so too, does the perimeter of our ignorance”&lt;/em&gt; — Neil DeGrasse Tyson&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;One of the many quotables from one of the great science communicators. A key reason in selecting this quote is due to its graphical representation.&lt;/p&gt;
+&lt;p&gt;The visualization above shows how increasing &lt;em&gt;area&lt;/em&gt; (&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;) leads to an increase in &lt;em&gt;perimeter&lt;/em&gt; (&lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt;) by virtue of the increase in radius (&lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt;) which is the key component of both equations.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;NB&lt;/strong&gt;:&lt;/em&gt; Some who are particularly astute (or anal) might correctly highlight that paralleling &lt;em&gt;ignorance&lt;/em&gt; to “perimeter” is slightly incorrect: it’s the area of the surrounding space - exclusive of the circle - that represents ignorance, and this area certainly decreases as the circle gets bigger .. but nobody likes a keener&lt;/p&gt;
+&lt;p&gt;Here’s the R code to create the visualization above using the infamous &lt;code&gt;ggplot2&lt;/code&gt;, &lt;code&gt;ggforce&lt;/code&gt; (for an easy circle &lt;em&gt;geom&lt;/em&gt;), and &lt;code&gt;viridis&lt;/code&gt; for colour pallette:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(&amp;quot;ggplot2&amp;quot;)
+library(&amp;quot;ggforce&amp;quot;)
+library(&amp;quot;viridis&amp;quot;)
+
+#data.frame that provides all the requisite data for plotting
+circle &amp;lt;- data.frame(x = c(1, 7),
+                     y = rep(2, 2),
+                     r = c(3, 2),
+                     type = ordered(c(&amp;quot;More&amp;quot;, &amp;quot;Less&amp;quot;)))
+#adding `area` (A) and `circumference` (C)
+circle$A &amp;lt;- round(pi * (circle$r)^2, 1)
+circle$C &amp;lt;- round(2 * pi * (circle$r), 1)
+
+#the vis
+ggplot(data = circle) + 
+        geom_circle(aes(x0 = x, y0 = y, r = r, fill = type), 
+                    colour = &amp;quot;slategrey&amp;quot;) + 
+        annotate(&amp;quot;text&amp;quot;, x = circle$x, y = circle$y + 0.25, 
+                 label = paste0(&amp;quot;A ≈ &amp;quot;, circle$A, &amp;quot;u²&amp;quot;),
+                 hjust = 0, 
+                 colour = &amp;quot;slategrey&amp;quot;) +
+        annotate(&amp;quot;text&amp;quot;, x = circle$x, y = circle$y + circle$r + 0.25, 
+                 label = paste0(&amp;quot;C ≈ &amp;quot;, circle$C, &amp;quot;u&amp;quot;),
+                 colour = &amp;quot;slategrey&amp;quot;) +
+        annotate(&amp;quot;text&amp;quot;, x = -1.8, y = -1.25, 
+                 label = &amp;quot;Area==pi*r^2~~and~~Circumference==2*pi*r&amp;quot;, 
+                 parse = T,
+                 hjust = 0, 
+                 colour = &amp;quot;slategrey&amp;quot;) +
+        scale_fill_viridis(discrete = T, option = &amp;quot;C&amp;quot;) +
+        coord_fixed() +
+        labs(x = &amp;quot;&amp;quot;, y = &amp;quot;&amp;quot;, fill = &amp;quot;Knowledge&amp;quot;) +
+        theme_bw() + 
+        theme(legend.position = &amp;quot;bottom&amp;quot;,
+              axis.text = element_blank(),
+              axis.ticks = element_blank(),
+              panel.grid = element_blank(),
+              plot.background = element_blank(),
+              panel.border = element_blank())&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Data Evolution I — The Rise</title>
+      <link>/post/the-data-evolution-1-3/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/the-data-evolution-1-3/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Preface (of this series)&lt;/strong&gt;:&lt;/em&gt; It is well established today that data &lt;code&gt;{Data is a general term I use for the spectrum of stats, data sci, ML and AI}&lt;/code&gt; is a function with an accelerating level of interest. For many there is difficulty in identifying what it means &lt;em&gt;to them&lt;/em&gt;, and this is an important question to answer for anyone, whether you fall within this realm (data scientists, engineers, etc) or are outside of it (manager, marketer, etc). And I think the source of this difficulty is directly caused by the lack of clarity around how this rise came to be. In these handful of posts I intend to describe the &lt;del&gt;r&lt;/del&gt;evolution, and from that provide a premise of &lt;strong&gt;how to evolve your world view such that you can incorporate these new tools to enhance the functions and outputs you care about&lt;/strong&gt;. You could say the first is the collection and tidying of the data, and the second is a set of inferences drawn from it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The realm of data – which is an umbrella term I use to include data science, statistics, and machine learning – has been in the spotlight for almost a decade. It has undoubtedly shown up in your life either through the lens of consumer products (think your fancy iPhone or smart wearable) or in your professional life, especially within industries like Business and Technology. Though I doubt anyone disagrees with this, strong evidence for this attention is seen in various career rankings where data roles have frequently represented a good portion of the top ten list: data roles were ranked first, second, and third in a &lt;a href=&#34;https://www.wsj.com/articles/SB123119236117055127&#34;&gt;WSJ study&lt;/a&gt; almost a decade ago; recently sixth overall and first, second, third, sixth and tenth within the Business sector by &lt;a href=&#34;https://money.usnews.com/careers/best-jobs/statistician&#34;&gt;US News Best Jobs Rankings&lt;/a&gt; for 2018. What has led to this increased infatuation? Knowing this will allow you to formulate your understanding of the domain, and how you can capture some of its goodness in service of your own endeavours, irrespective of the domain and function you operate in.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What will I get from reading this first article?&lt;/strong&gt; By the end of this short post you will have a high-level review of the key elements behind it all, which is required to develop a framework to assess its role, value, and application to you. In the next I will offer my perspective of this framework to do exactly that.&lt;/p&gt;
+&lt;p&gt;So let’s get right to it!&lt;/p&gt;
+&lt;p&gt;The inputs to this rise can be reduced to the following two significant factors:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Manufacturing efficiencies of computer components (Economies of scale and scope)&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The Internet&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The second is more readily understandable than the first, but let’s break each down with a bit more detail for clarity.&lt;/p&gt;
+&lt;p&gt;“Manufacturing efficiencies” here is a general phrase referencing the remarkable gains in processing (including graphics processing) and in storage. Specifically, the increase in power and capacity coupled with a decrease in costs; a holy trinity of stronger, faster, cheaper. This is a well known fact of recent times and the natural question you may have is: how is this a significant factor? If you’ve ever taken a course in linear algebra for example, you may recall that computations such as inverting matrices were quite intensive to do manually (or maybe that was just for me). Faster and more powerful chips have enabled us to task computers with various calculations like these at scale. What about storage? With the favourable capacity and cost advancements, our “simple” desktop machines have enabled us to store large datasets in memory, to manipulate and transform them, and then to fit models to them. &lt;code&gt;{models are what enables us to make predictions, like &#39;will this customer churn? .. what&#39;s the fastest route? .. etc&#39;}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Storage also provides a natural segue to the second key factor of The Internet. With smaller, more powerful chips at cheaper prices, we’ve been able to outfit so many devices with them. Not only did computers become popular devices, but most devices became computers: phones, televisions, gaming systems, watches, etc. These subsequently generated lots of data which was also quite inexpensive to store. But there’s no real appeal in just outfitting things with more storage especially if they distract from the primary functions or physical features, so what if we can store it elsewhere and also access whenever necessary or sensible?&lt;/p&gt;
+&lt;p&gt;As the digital infrastructure of wires, towers, and satellites provided a truly word wide web with sub-1s speeds, it was entirely reasonable to do just that: build large scale data storage facilities which enable data generation and collection, and then rely on the Internet to connect whatever (your computer, watch, car, thermostat, anything) in order to transfer whatever is required. This is essentially the birth of “big data” and of course the cloud.&lt;/p&gt;
+&lt;p&gt;Now that’s mostly a summary of computers and technology with some intersection on data, but it may still be a bit unclear how all this connects causally to the data rise. &lt;code&gt;{Which is precisely the point I&#39;m making, but more on that later}&lt;/code&gt; For now I can still tie the above together a bit more explicitly.&lt;/p&gt;
+&lt;p&gt;From these novel devices and the Internet itself (a world where everything can be a data point) data generation exploded. Also, with inexpensive storage and accessibility, we had a sharp and substantial increase in the &lt;strong&gt;supply of data&lt;/strong&gt;. The next question became: what can we do with all this data? To which many thought: let’s bring in some domain experts to explore that. What these explorations yielded is demonstrated by thinking of some obvious examples; think of the Googles, Apples, or even Wal Marts, Amazons, and Netflixes, etc. Seeing the (incredibly powerful) outputs of these explorations, companies across industries increased their investments into data, giving you the increased &lt;strong&gt;demand in data&lt;/strong&gt;; the efforts of attracting data people thereby leading to data roles landing in many of the top ten career rankings .. or in short, the rise.&lt;/p&gt;
+&lt;p&gt;Remember &lt;em&gt;“Now that’s mostly a summary of computers and technology with some intersection on data”&lt;/em&gt; ..?&lt;/p&gt;
+&lt;p&gt;This here is the fundamental statement I’m making, which is what leads to the premise of &lt;strong&gt;evolution and not revolution&lt;/strong&gt;: the rise of data is really a phenomenon that occurred as a byproduct of the advancement of technology, and not through some independent “oh stats is pretty cool” event. This distinction is what prevents us from grasping our heads around the buzz and most crucially, of determining how and why it matters to us. Whenever you consider data you should be thinking of technology and computers. Whenever you want to start to think of the purpose and value of data to you, think of the purpose and value of technology .. in a nutshell: &lt;strong&gt;thinking of data is like thinking of technology and computers, and therefore don’t think outputs, think inputs.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This might still be a bit fuzzy but we’ve accomplished the first necessary objective: an established basis of where and how data came about, and particularly that it is connected to a larger body, computers/technology. The second post will enable how to think about the usefulness of data to us individually, and should also make clear why not knowing this distinction prevented us in the first place. I will also share my own basis of the role and purpose of data that is largely universal to function and organization, so you can leverage it precisely to determine its usefulness. With those answers, your next steps become much more actionable as you’ll be able to say &lt;em&gt;‘Now I know what this means to me, how should I go about building/accomplishing this?’&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Pigouvian Taxes</title>
+      <link>/feathers/pigouvian-taxes/</link>
+      <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/feathers/pigouvian-taxes/</guid>
+      <description>&lt;p&gt;Snippet of the menu for an (intentionally) anonymous sushi restaurant in Toronto, and all I can think is: &lt;strong&gt;A literal tax on happiness&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It reminds me of a course I took in &lt;em&gt;Economics of Public Finance&lt;/em&gt;, specifically on the subtopic of &lt;a href=&#34;https://en.wikipedia.org/wiki/Pigovian_tax&#34;&gt;Pigouvian taxes&lt;/a&gt; — essentially a tax placed on activities that create negative costs to others: an entrepreneur may wish to build a factory next to a residential area and a whole host of ‘costs’ may arise which the firm does not pay directly, such as unpleasant fumes causing perma-smelly-backyards for nearby residents (more generally, a negative externality). To discourage or lead to a more desirable (efficient) outcome, there may be taxes levied on the factory owners, perhaps to provide residents with a lifetime supply of &lt;em&gt;Febreze&lt;/em&gt;. I feel as if this restauranteur may view joy as a negative thing, so to offset the happiness of friends congregating to celebrate we all need to pay a $1 tax .. don’t turn that frown upside down, please.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Example Talk</title>
+      <link>/talk/example-talk/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/example-talk/</guid>
+      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
