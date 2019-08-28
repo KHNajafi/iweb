@@ -1,0 +1,70 @@
+---
+title: Perimeter of Ignorance
+author: ''
+date: '2018-02-18'
+tags:
+  - Quotes
+  - Visualization
+  - ggplot2
+slug: perimeter-of-ignorance
+lastmod: '2019-08-26T19:21:48-04:00'
+featured: no
+summary: "A quote that is easily visualized, because a picture is worth a thousand ~~words~~ lines of code"
+image:
+  caption: 'As _A_ increases, so does _C_'
+  placement: 3
+  preview_only: no
+---
+
+
+
+<blockquote>
+<p><em>“As the area of our knowledge increases, so too, does the perimeter of our ignorance”</em> — Neil DeGrasse Tyson</p>
+</blockquote>
+<p>One of the many quotables from one of the great science communicators. A key reason in selecting this quote is due to its graphical representation.</p>
+<p>The visualization above shows how increasing <em>area</em> (<span class="math inline">\(A\)</span>) leads to an increase in <em>perimeter</em> (<span class="math inline">\(C\)</span>) by virtue of the increase in radius (<span class="math inline">\(r\)</span>) which is the key component of both equations.</p>
+<p><em><strong>NB</strong>:</em> Some who are particularly astute (or anal) might correctly highlight that paralleling <em>ignorance</em> to “perimeter” is slightly incorrect: it’s the area of the surrounding space - exclusive of the circle - that represents ignorance, and this area certainly decreases as the circle gets bigger .. but nobody likes a keener</p>
+<p>Here’s the R code to create the visualization above using <code>ggplot2</code>, <code>ggforce</code> (for an easy circle <em>geom</em>), and <code>viridis</code> for colour pallette:</p>
+<pre class="r"><code>library(&quot;ggplot2&quot;)
+library(&quot;ggforce&quot;)
+library(&quot;viridis&quot;)
+
+#data.frame that provides all the requisite data for plotting
+circle &lt;- data.frame(x = c(1, 7),
+                     y = rep(2, 2),
+                     r = c(3, 2),
+                     type = ordered(c(&quot;More&quot;, &quot;Less&quot;)))
+#adding `area` (A) and `circumference` (C)
+circle &lt;- circle %&gt;% 
+        mutate(A = round(pi * (circle$r)^2, 1),
+               C = round(2 * pi * (circle$r), 1))
+
+#the vis
+ggplot(data = circle) + 
+        # the plot
+        geom_circle(aes(x0 = x, y0 = y, r = r, fill = type), 
+                    colour = &quot;slategrey&quot;) + 
+        annotate(&quot;text&quot;, x = circle$x, y = circle$y + 0.25, 
+                 label = paste0(&quot;A ≈ &quot;, circle$A, &quot;u²&quot;),
+                 hjust = 0, 
+                 colour = &quot;slategrey&quot;) +
+        annotate(&quot;text&quot;, x = circle$x, y = circle$y + circle$r + 0.25, 
+                 label = paste0(&quot;C ≈ &quot;, circle$C, &quot;u&quot;),
+                 colour = &quot;slategrey&quot;) +
+        annotate(&quot;text&quot;, x = -1.8, y = -1.25, 
+                 label = &quot;Area==pi*r^2~~and~~Circumference==2*pi*r&quot;, 
+                 parse = T,
+                 hjust = 0, 
+                 colour = &quot;slategrey&quot;) +
+        # a colour pallette from viridis
+        scale_fill_viridis(discrete = T, option = &quot;C&quot;) +
+        coord_fixed() +
+        # vis labels
+        labs(x = &quot;&quot;, y = &quot;&quot;, fill = &quot;Knowledge&quot;) +
+        theme_bw() + 
+        theme(legend.position = &quot;bottom&quot;,
+              axis.text = element_blank(),
+              axis.ticks = element_blank(),
+              panel.grid = element_blank(),
+              plot.background = element_blank(),
+              panel.border = element_blank())</code></pre>

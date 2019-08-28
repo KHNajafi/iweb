@@ -1,0 +1,51 @@
+---
+title: The Data Evolution I — The Rise
+author: ''
+date: '2018-03-01'
+slug: the-data-evolution-1
+categories: []
+tags:
+  - Data
+subtitle: ''
+summary: "_The first of a two-parter:_ A premise that the rise of data is more **evolution** than revolution.  Why does this distinction even matter? Because the important thing for anyone is 'what does it mean for me'.  In the initial installment I lay down the 'causes' of this rise as context"
+authors: []
+lastmod: '2019-08-26T20:22:34-04:00'
+featured: no
+image:
+  caption: "That first snow fall seems to come out of nowhere, but there are a number of changes leading up that usually occur unnoticed | [©1996](https://www.gocomics.com/calvinandhobbes/2018/11/14) _Calvin & Hobbes_; Bill Watterson"
+  placement: 3
+  preview_only: no
+projects: []
+---
+
+> _**Preface (of this series)**:_ It is well established today that data `{Data is a general term I use for the spectrum of stats, data sci, ML and AI}` is a function with an accelerating level of interest.  For many there is difficulty in identifying what it means _to them_,  and this is an important question to answer for anyone, whether you fall within this realm (data scientists, engineers, etc) or are outside of it (manager, marketer, etc).  And I think the source of this difficulty is directly caused by the lack of clarity around how this rise came to be.  In these handful of posts I intend to describe the ~~r~~evolution, and from that provide a premise of **how to evolve your world view such that you can incorporate these new tools to enhance the functions and outputs you care about**.  You could say the first is the collection and tidying of the data, and the second is a set of inferences drawn from it.  
+
+The realm of data -- which is an umbrella term I use to include data science, statistics, and machine learning -- has been in the spotlight for almost a decade.  It has undoubtedly shown up in your life either through the lens of consumer products (think your fancy iPhone or smart wearable) or in your professional life, especially within industries like Business and Technology.  Though I doubt anyone disagrees with this, strong evidence for this attention is seen in various career rankings where data roles have frequently represented a good portion of the top ten list: data roles were ranked first, second, and third in a [WSJ study](https://www.wsj.com/articles/SB123119236117055127) almost a decade ago; recently sixth overall and first, second, third, sixth and tenth within the Business sector by [US News Best Jobs Rankings](https://money.usnews.com/careers/best-jobs/statistician) for 2018.  What has led to this increased infatuation? Knowing this will allow you to formulate your understanding of the domain, and how you can capture some of its goodness in service of your own endeavours, irrespective of the domain and function you operate in.  
+
+**What will I get from reading this first article?**
+By the end of this short post you will have a high-level review of the key elements behind it all, which is required to develop a framework to assess its role, value, and application to you.  In the next I will offer my perspective of this framework to do exactly that.
+
+So let's get right to it! 
+
+The inputs to this rise can be reduced to the following two significant factors:  
+
+1. Manufacturing efficiencies of computer components (Economies of scale and scope)  
+1. The Internet  
+
+The second is more readily understandable than the first, but let's break each down with a bit more detail for clarity.  
+
+"Manufacturing efficiencies" here is a general phrase referencing the remarkable gains in processing (including graphics processing) and in storage.  Specifically, the increase in power and capacity coupled with a decrease in costs; a holy trinity of stronger, faster, cheaper.  This is a well known fact of recent times and the natural question you may have is: how is this a significant factor? If you've ever taken a course in linear algebra for example, you may recall that computations such as inverting matrices were quite intensive to do manually (or maybe that was just for me).  Faster and more powerful chips have enabled us to task computers with various calculations like these at scale.  What about storage? With the favourable capacity and cost advancements, our "simple" desktop machines have enabled us to store large datasets in memory, to manipulate and transform them, and then to fit models to them.  `{models are what enables us to make predictions, like 'will this customer churn? .. what's the fastest route? .. etc'}`
+
+Storage also provides a natural segue to the second key factor of The Internet.  With smaller, more powerful chips at cheaper prices, we've been able to outfit so many devices with them.  Not only did computers become popular devices, but most devices became computers: phones, televisions, gaming systems, watches, etc.  These subsequently generated lots of data which was also quite inexpensive to store.  But there's no real appeal in just outfitting things with more storage especially if they distract from the primary functions or physical features, so what if we can store it elsewhere and also access whenever necessary or sensible? 
+
+As the digital infrastructure of wires, towers, and satellites provided a truly word wide web with sub-1s speeds, it was entirely reasonable to do just that: build large scale data storage facilities which enable data generation and collection, and then rely on the Internet to connect whatever (your computer, watch, car, thermostat, anything) in order to transfer whatever is required.  This is essentially the birth of "big data" and of course the cloud.
+
+Now that's mostly a summary of computers and technology with some intersection on data, but it may still be a bit unclear how all this connects causally to the data rise.  `{Which is precisely the point I'm making, but more on that later}` For now I can still tie the above together a bit more explicitly.
+
+From these novel devices and the Internet itself (a world where everything can be a data point) data generation exploded.  Also, with inexpensive storage and accessibility, we had a sharp and substantial increase in the **supply of data**.  The next question became: what can we do with all this data? To which many thought: let's bring in some domain experts to explore that.  What these explorations yielded is demonstrated by thinking of some obvious examples; think of the Googles, Apples, or even Wal Marts, Amazons, and Netflixes, etc.  Seeing the (incredibly powerful) outputs of these explorations, companies across industries increased their investments into data, giving you the increased **demand in data**; the efforts of attracting data people thereby leading to data roles landing in many of the top ten career rankings .. or in short, the rise.
+
+Remember _"Now that's mostly a summary of computers and technology with some intersection on data"_ ..? 
+
+This here is the fundamental statement I'm making, which is what leads to the premise of **evolution and not revolution**: the rise of data is really a phenomenon that occurred as a byproduct of the advancement of technology, and not through some independent "oh stats is pretty cool" event.  This distinction is what prevents us from getting our heads around the buzz and most crucially, of determining how and why it matters to us.  Whenever you consider data you should be thinking of technology and computers.  Whenever you want to start to think of the purpose and value of data to you, think of the purpose and value of technology ..  in a nutshell: **thinking of data is like thinking of technology and computers, and therefore don't think outputs, think inputs.**  
+
+This might still be a bit fuzzy but we've accomplished the first necessary objective: an established basis of where and how data came about, and particularly that it is connected to a larger body, computers/technology.  The second post will enable how to think about the usefulness of data to us individually, and should also make clear why not knowing this distinction prevented us in the first place.  I will also share my own basis of the role and purpose of data that is largely universal to function and organization, so you can leverage it precisely to determine its usefulness.  With those answers, your next steps become much more actionable as you'll be able to say _'Now I know what this means to me, how should I go about building/accomplishing this?'_.
