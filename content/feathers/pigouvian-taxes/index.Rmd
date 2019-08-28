@@ -1,0 +1,23 @@
+---
+title: Pigouvian Taxes
+author: ''
+date: '2018-01-25'
+slug: pigouvian-taxes
+categories: []
+tags:
+  - Economics
+subtitle: ''
+summary: "A (non)benevolent social planner's ploy to increasing public finances"
+authors: []
+lastmod: '2019-08-23T23:36:20-04:00'
+featured: no
+image:
+  caption: "Don't Worry. Be Happy."
+  focal_point: 'Smart'
+  preview_only: no
+projects: []
+---
+
+Snippet of the menu for an (intentionally) anonymous sushi restaurant in Toronto, and all I can think is: **A literal tax on happiness**  
+
+It reminds me of a course I took in _Economics of Public Finance_, specifically on the subtopic of [Pigouvian taxes](https://en.wikipedia.org/wiki/Pigovian_tax) — essentially a tax placed on activities that create negative costs to others: an entrepreneur may wish to build a factory next to a residential area and a whole host of 'costs' may arise which the firm does not pay directly, such as unpleasant fumes causing perma-smelly-backyards for nearby residents (more generally, a negative externality).  To discourage or lead to a more desirable (efficient) outcome, there may be taxes levied on the factory owners, perhaps to provide residents with a lifetime supply of _Febreze_.  I feel as if this restauranteur may view joy as a negative thing, so to offset the happiness of friends congregating to celebrate we all need to pay a $1 tax .. don't turn that frown upside down, please.

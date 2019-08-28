@@ -1,0 +1,58 @@
+---
+title: Visualizing Homelessness in Toronto
+author: ''
+date: '2019-07-01'
+slug: shelters-TO
+categories: []
+tags:
+  - Shelters
+  - ggplot2
+  - leaflet
+  - shiny
+subtitle: "Part of an attempt at applying data science to 'bigger' problems than business or tech"
+summary: 'Shelters throughout the city provide assistance to multiple groups of the city, we draw a map of their locations and analyze occupancy through the year'
+authors: []
+lastmod: '2019-08-26T18:17:04-04:00'
+featured: no
+image:
+  caption: 'Is it mostly adult males who are at risk for homelessness? Where are shelter programs in the city and how many people do they serve?'
+  placement: 3
+  preview_only: no
+projects: []
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
+<script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
+
+
+<div id="data-science-for-humanity" class="section level2">
+<h2>Data Science for Humanity</h2>
+<p>During my undergrad in Waterloo I was exposed to the realities of homelessness in the city. Initially through daily life and mostly with adult men, which led me to volunteering a bit of time for a couple of events at a shelter. I quickly learnt about the deeper extent of homelessness, including the variety of groups that are affected and reliant on non-profit and city funded programs.</p>
+<p>Many of us are largely ignorant of these services, as well as the depth of the problem itself. Based on your day-to-day, you may have a narrow perception of things, just as my initial view of homelessness mostly affecting adult males.</p>
+<p>I’ve separately wanted to explore some of the datasets that the City provides through it’s (excellent) <a href="https://open.toronto.ca">Open Data program</a>. You have probably interacted with this service (albeit unknowingly) as it powers a number of apps such as transit times, or the bike share network. Finding a dataset on shelter services and occupancy prompted me to develop <a href="https://batman.shinyapps.io/toronto_shelter_occupancy/">a simple app</a> to shed some light on the issue.</p>
+<p><em>Why an app on homelessness?</em> – This is a bit of a silly question, but my intentions stem from an effort to apply some of my time and capabilities to something a bit more meaningful and substantive .. sort of as a response to the question I sometimes ask myself <strong>“what positive impact am I having on my community?”</strong>. The main point here is that I feel the potential of modern data science can extend beyond (mostly) business and tech to the realms of ‘grander’ problems. The deeper problems we face in our current era; especially the ones affecting groups who are not typically beneficiaries of modern tools.</p>
+<p>With that, let me lay out the details in a more organized fashion.</p>
+</div>
+<div id="the-app" class="section level2">
+<h2>The App</h2>
+<div id="question" class="section level3">
+<h3>Question</h3>
+<p><code>Where are shelter programs offered in the city? Crucially, how does occupancy trend over time by group?</code></p>
+<p>We can enrich the core dataset with location variables that will allow us to visualize the data layered onto a map, which provides a useful representation of “where”.</p>
+<p>Further, we can focus on occupancy as a proportion of capacity, to make it easier to observe if existing programs meet demand or not (by group, of course); for example, is there sufficient capacity for families? How does occupancy for women’s programs vary relative to men’s?</p>
+</div>
+<div id="dataset" class="section level3">
+<h3>Dataset</h3>
+<p><code>Toronto Shelter Data Feed</code></p>
+<p>As mentioned, <a href="https://batman.shinyapps.io/toronto_shelter_occupancy/">the app</a> is powered by the shelters dataset through the city’s Open Data program, which updates daily the facility, program name, and capacity and occupancy. The occupancy is taken the following day at 4a, so for example today’s occupancy will be a tally of number in attendance at 4a tomorrow. I’ve used the facility and address information to populate the latitude/longitude data and merged it into the table. Finally, I use the time series to determine average monthly metrics displayed on the map, and then plot the daily occupancy for each shelter to highlight trends within each group.</p>
+</div>
+<div id="analysis" class="section level3">
+<h3>Analysis</h3>
+<p><code>How is the app created and what does it provide?</code></p>
+<p>I’m utilizing <code>shiny</code> for the app, and <a href="http://rstudio.github.io/leaflet/">Leaflet</a> for the main visualization (via <code>leaflet</code> for R) as well as <code>ggplot2</code>. The app highlights location, as well as average monthly capacity using circles on the map (larger the circle, larger the average capacity of the shelter). It also provides a daily breakdown of occupancy per shelter for the month based on the date selected.</p>
+<div id="htmlwidget-1" style="width:100%;height:480px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/shelters-TO/index_files/figure-html//widgets/widget_shelter snippet.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<p>Visit the <a href="https://batman.shinyapps.io/toronto_shelter_occupancy/">shelters app here</a>.</p>
+</div>
+</div>

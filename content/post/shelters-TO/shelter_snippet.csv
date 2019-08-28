@@ -1,0 +1,6 @@
+"SHELTER_NAME","SECTOR","FACILITY_NAME","occupancy_year","occupancy_month","capacity_mean","occupancy_rate_mean","latitude","longitude","row_id"
+"COSTI Reception Centre","Families","COSTI Radisson Hotel",2019,6,836.666666666667,0.960022540092016,43.7703,-79.323,10
+"Sojourn House","Co-ed","Sojourn House(Singles)",2019,6,94,0.988652482269504,43.65453,-79.36685,58
+"HFS - Kennedy Shelter","Women","HFS - 702 Kennedy Shelter",2019,6,90,0.997777777777778,43.72784,-79.26629,34
+"Seaton House","Men","Seaton House - 339 George Street",2019,6,87.3,0.974303723031594,43.6597,-79.37432,57
+"Eva's Phoenix","Youth","Eva's Phoenix",2019,6,50,0.896666666666667,43.64649,-79.39824,17

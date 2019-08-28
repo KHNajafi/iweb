@@ -1,0 +1,25 @@
+---
+title: Learning v. Knowing
+author: ''
+date: '2018-08-25'
+slug: new-v-known
+categories: []
+tags:
+  - Quotes
+subtitle: ''
+summary: 'A quote that speaks to the rate of growth of information, but bears a deeper lesson'
+authors: []
+lastmod: '2019-08-23T23:22:42-04:00'
+featured: no
+image:
+  caption: 'A little more caffeine, and it will make sense to me..'
+  placement: 3
+  preview_only: no
+projects: []
+---
+
+> _"The rate at which things change is greater than our rate to learn"_  — Anon
+
+This was a wonderful tidbit I heard while attending a recent conference, unfortunately I cannot recall who said it! Nonetheless, on the quote itself:  
+
+Aside from the obvious, I find it tells us something a bit more implicit, and arguably more profound: Obtaining newly created knowledge is good and well, but _how well do you really understand something?_ Are there topics you have a mastery of? An awareness of new ideas, models, etc is most useful if it can further one's understanding or capabilities _in their core domains_.  Jack-of-all-trades etc etc, as the other saying goes..
