@@ -68,6 +68,8 @@ As mentioned, [the app](https://batman.shinyapps.io/toronto_shelter_occupancy/) 
 
 I'm utilizing `shiny` for the app, and [Leaflet](http://rstudio.github.io/leaflet/) for the main visualization (via `leaflet` for R) as well as `ggplot2`.  The app highlights location, as well as average monthly capacity using circles on the map (larger the circle, larger the average capacity of the shelter).  It also provides a daily breakdown of occupancy per shelter for the month based on the date selected.
 
+The following snippet gives a flavour of the app; showing capacity averages and locations for a subset of shelters across each group for the month of June:
+
 ```{r shelter snippet}
 require(htmlwidgets)
 require(htmltools)
