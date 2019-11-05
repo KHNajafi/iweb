@@ -32,10 +32,6 @@ subtitle = "short posts focused on fun + an insight into how I view of the world
 [[content.filter_button]]
     name = "Quotes"
     tag = "Quotes"
-  
-  [[content.filter_button]]
-    name = "Other"
-    tag = "Economics"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
